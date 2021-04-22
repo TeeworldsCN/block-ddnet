@@ -203,6 +203,7 @@ class CCharacterCore
 public:
 	vec2 m_Pos;
 	vec2 m_Vel;
+	vec2 m_HookDragVel;
 	bool m_Hook;
 	bool m_Collision;
 
@@ -230,6 +231,9 @@ public:
 	void Reset();
 	void Tick(bool UseInput);
 	void Move();
+
+	void AddDragVelocity();
+	void ResetDragVelocity();
 
 	void Read(const CNetObj_CharacterCore *pObjCore);
 	void Write(CNetObj_CharacterCore *pObjCore);
