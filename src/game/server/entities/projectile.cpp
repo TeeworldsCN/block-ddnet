@@ -212,7 +212,7 @@ void CProjectile::Tick()
 					pOwnerChar->m_TeleGunTeleport = true;
 					pOwnerChar->m_IsBlueTeleGunTeleport = TileFIndex == TILE_ALLOW_BLUE_TELE_GUN || IsBlueSwitchTeleGun;
 
-					if(g_Config.m_SvTelegunKeepHook) {
+					if(! g_Config.m_SvTelegunKeepHook) {
 						pOwnerChar->Core()->m_HookedPlayer = -1;
 		                pOwnerChar->Core()->m_HookState = HOOK_RETRACTED;
 	                    pOwnerChar->Core()->m_HookPos = PossiblePos;
