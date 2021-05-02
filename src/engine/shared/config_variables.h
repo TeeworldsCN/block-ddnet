@@ -128,7 +128,7 @@ MACRO_CONFIG_INT(InpMousesens, inp_mousesens, 200, 1, 100000, CFGFLAG_SAVE | CFG
 MACRO_CONFIG_INT(InpMouseOld, inp_mouseold, 0, 0, 1, CFGFLAG_SAVE | CFGFLAG_CLIENT, "Use old mouse mode (warp mouse instead of raw input)")
 MACRO_CONFIG_INT(InpIgnoredModifiers, inp_ignored_modifiers, 0, 0, 65536, CFGFLAG_SAVE | CFGFLAG_CLIENT, "Ignored keyboard modifier mask")
 
-MACRO_CONFIG_INT(SvTelegunOnTee, sv_telegun_on_tee, 0, 0, 1, CFGFLAG_SERVER, "Disable telegun on tee. It will only teleport with telegun blocks")
+MACRO_CONFIG_INT(SvTelegunOnTee, sv_telegun_on_tee, 1, 0, 1, CFGFLAG_SERVER, "Disable telegun on tee. It will only teleport with telegun blocks")
 
 MACRO_CONFIG_STR(SvName, sv_name, 128, "unnamed server", CFGFLAG_SERVER, "Server name")
 MACRO_CONFIG_STR(Bindaddr, bindaddr, 128, "", CFGFLAG_CLIENT | CFGFLAG_SERVER | CFGFLAG_MASTER, "Address to bind the client/server to")
