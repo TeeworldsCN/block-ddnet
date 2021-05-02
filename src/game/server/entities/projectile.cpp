@@ -201,8 +201,10 @@ void CProjectile::Tick()
 				bool Found;
 				vec2 PossiblePos;
 
-				if(!Collide)
-					Found = GetNearestAirPosPlayer(pTargetChr ? pTargetChr->m_Pos : ColPos, &PossiblePos);
+				if(! Collide)
+				    if(g_Config.m_SvTelegunOnTee) {
+                        Found = GetNearestAirPosPlayer(pTargetChr ? pTargetChr->m_Pos : ColPos, &PossiblePos);
+					}
 				else
 					Found = GetNearestAirPos(NewPos, CurPos, &PossiblePos);
 

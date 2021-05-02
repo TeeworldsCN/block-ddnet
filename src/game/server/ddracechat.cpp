@@ -149,13 +149,13 @@ void CGameContext::ConSettings(IConsole::IResult *pResult, void *pUserData)
 				"and all of your team will die if the team is locked");
 			pSelf->Console()->Print(IConsole::OUTPUT_LEVEL_STANDARD, "settings", aBuf);
 		}
-		else if(str_comp(pArg, "cheats") == 0)
-		{
-			pSelf->Console()->Print(IConsole::OUTPUT_LEVEL_STANDARD, "settings",
-				g_Config.m_SvTestingCommands ?
-					"Cheats are enabled on this server" :
-					"Cheats are disabled on this server");
-		}
+		// else if(str_comp(pArg, "cheats") == 0)
+		// {
+		// 	pSelf->Console()->Print(IConsole::OUTPUT_LEVEL_STANDARD, "settings",
+		// 		g_Config.m_SvTestingCommands ?
+		// 			"Cheats are enabled on this server" :
+		// 			"Cheats are disabled on this server");
+		// }
 		else if(str_comp(pArg, "collision") == 0)
 		{
 			pSelf->Console()->Print(IConsole::OUTPUT_LEVEL_STANDARD, "settings",
