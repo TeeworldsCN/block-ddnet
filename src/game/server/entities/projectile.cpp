@@ -196,17 +196,13 @@ void CProjectile::Tick()
 					IsSwitchTeleGun = IsBlueSwitchTeleGun = false;
 			}
 
-			if(TileFIndex == TILE_ALLOW_TELE_GUN || TileFIndex == TILE_ALLOW_BLUE_TELE_GUN || IsSwitchTeleGun || IsBlueSwitchTeleGun || pTargetChr)
+			if(TileFIndex == TILE_ALLOW_TELE_GUN || TileFIndex == TILE_ALLOW_BLUE_TELE_GUN || IsSwitchTeleGun || IsBlueSwitchTeleGun || (pTargetChr && g_Config.m_SvTelegunOnTee))
 			{
 				bool Found;
 				vec2 PossiblePos;
 
 				if(! Collide)
-				    if(g_Config.m_SvTelegunOnTee) {
-                        Found = GetNearestAirPosPlayer(pTargetChr ? pTargetChr->m_Pos : ColPos, &PossiblePos);
-					} else {
-						Found = false;
-					}
+                    Found = GetNearestAirPosPlayer(pTargetChr ? pTargetChr->m_Pos : ColPos, &PossiblePos);
 				else
 					Found = GetNearestAirPos(NewPos, CurPos, &PossiblePos);
 
