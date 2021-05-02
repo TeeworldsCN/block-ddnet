@@ -374,7 +374,7 @@ public:
 	void InitRegister(CNetServer *pNetServer, IEngineMasterServer *pMasterServer, CConfig *pConfig, IConsole *pConsole);
 	int Run();
 
-	static void ConTestingCommands(IConsole::IResult *pResult, void *pUser);
+	// static void ConTestingCommands(IConsole::IResult *pResult, void *pUser);
 	static void ConRescue(IConsole::IResult *pResult, void *pUser);
 	static void ConKick(IConsole::IResult *pResult, void *pUser);
 	static void ConStatus(IConsole::IResult *pResult, void *pUser);

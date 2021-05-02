@@ -2693,12 +2693,12 @@ int CServer::Run()
 	return ErrorShutdown();
 }
 
-void CServer::ConTestingCommands(CConsole::IResult *pResult, void *pUser)
-{
-	char aBuf[128];
-	str_format(aBuf, sizeof(aBuf), "Value: %d", g_Config.m_SvTestingCommands);
-	((CConsole *)pUser)->Print(CConsole::OUTPUT_LEVEL_STANDARD, "console", aBuf);
-}
+// void CServer::ConTestingCommands(CConsole::IResult *pResult, void *pUser)
+// {
+// 	char aBuf[128];
+// 	str_format(aBuf, sizeof(aBuf), "Value: %d", g_Config.m_SvTestingCommands);
+// 	((CConsole *)pUser)->Print(CConsole::OUTPUT_LEVEL_STANDARD, "console", aBuf);
+// }
 
 void CServer::ConRescue(CConsole::IResult *pResult, void *pUser)
 {
