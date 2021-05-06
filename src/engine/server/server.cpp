@@ -36,6 +36,7 @@
 #include <engine/shared/linereader.h>
 #include <vector>
 #include <zlib.h>
+#include <cstring>
 
 #include "databases/connection.h"
 #include "databases/connection_pool.h"

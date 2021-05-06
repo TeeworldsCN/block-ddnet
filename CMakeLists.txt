@@ -131,6 +131,8 @@ set(CLIENT_EXECUTABLE DDNet CACHE STRING "Name of the build client executable")
 # Compiler flags
 ########################################################################
 
+add_definitions(-D_GNU_SOURCE)
+
 function(add_c_compiler_flag_if_supported VARIABLE FLAG)
   if(ARGC GREATER 2)
     set(CHECKED_FLAG "${ARGV2}")
