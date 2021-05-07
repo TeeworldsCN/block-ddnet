@@ -515,7 +515,9 @@ bool CScore::MapInfoThread(IDbConnection *pSqlServer, const ISqlData *pGameData,
 void CScore::SaveScore(int ClientID, float Time, const char *pTimestamp, float CpTime[NUM_CHECKPOINTS], bool NotEligible)
 {
 	CConsole *pCon = (CConsole *)GameServer()->Console();
-	if(pCon->m_Cheated || NotEligible)
+	// if(pCon->m_Cheated || NotEligible)
+	// 	return;
+	if(NotEligible)
 		return;
 
 	CPlayer *pCurPlayer = GameServer()->m_apPlayers[ClientID];
@@ -630,8 +632,8 @@ bool CScore::SaveScoreThread(IDbConnection *pSqlServer, const ISqlData *pGameDat
 void CScore::SaveTeamScore(int *aClientIDs, unsigned int Size, float Time, const char *pTimestamp)
 {
 	CConsole *pCon = (CConsole *)GameServer()->Console();
-	if(pCon->m_Cheated)
-		return;
+	// if(pCon->m_Cheated)
+	// 	return;
 	for(unsigned int i = 0; i < Size; i++)
 	{
 		if(GameServer()->m_apPlayers[aClientIDs[i]]->m_NotEligibleForFinish)
